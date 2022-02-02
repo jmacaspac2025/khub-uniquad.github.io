@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Course: Biology 3 - Pinatubo </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+
+    <style>
+  
+    header {
+      width: 100%;
+      height: 75px;
+    }
+
+    .title {
+      width: 100%;
+      background-color: white;
+      height: 200px;
+      margin-bottom: 15px;
+      border-radius: 20px;
+      background-image: url('https://s10.gifyu.com/images/Untitled-design-33a46d5cf2c732125.png');
+      background-size: 110% 100%;
+    }
+
+    .announcements {
+      height: 97px;
+      width: 100%;
+      background-color: white;
+      margin-bottom: 15px;
+      border-radius: 15px;
+    }
+
+    .course {
+      width: 100%;
+      background-color: white;
+      margin-bottom: 15px;
+      height: 1050px;
+      border-radius: 25px;
+      padding-top: 20px;
+    }
+
+    .jumbotron {
+      width: 100%;
+      height: 75px;
+      background-size: 100%;
+      background-color: #92a8d1;
+      background-position: center;
+      position: fixed;
+      color: rgb(255, 255, 255);
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      padding-top: 4px;
+      z-index: 1;
+    }
+
+    .jumbtron p {
+      margin-top: 0px;
+    }
+
+    .bord {
+      margin-bottom: 0px;
+      font-size: 30px;
+    }
+
+    .col-lg-4 {
+      border-radius: 10px;
+      padding-right: 20px;
+
+    }
+
+    .aside {
+      background-color: rgb(255, 255, 255);
+      margin-left: 20px;
+      position: fixed;
+      width: 28%;
+      height: 100vh;
+      overflow: scroll;
+
+    }
+
+    .side {
+      width: 100%;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .side h2 {
+      margin-top: 10px;
+      font-size: 23px;
+      color: rgba(44, 44, 44, 0.815)
+    }
+
+    img {
+      border-radius: 5px;
+      border-color: rgba(0, 0, 0, 0.815)
+    }
+
+    .copyright {
+      width: 100%;
+      background-color: #e7b023;
+      color: #000000;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .sidenav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 78px;
+      background: #92a8d1;
+      padding: 6px 14px;
+      z-index: 99;
+      transition: all 0.5s ease;
+    }
+
+    .sidenav.open {
+      width: 250px;
+    }
+
+    .sidenav .details {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .sidenav .details .icon {
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .sidenav .details .namelogo {
+      color: black;
+      font-size: 20px;
+      font-weight: 600;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .sidenav.open .details .icon,
+    .sidenav.open .details .namelogo {
+      opacity: 1;
+    }
+
+    .sidenav .details #btn {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      font-size: 22px;
+      transition: all 0.4s ease;
+      font-size: 23px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.5s ease;
+    }
+
+    .sidenav.open .details #btn {
+      text-align: right;
+    }
+
+    .sidenav i {
+      color: #fff;
+      height: 60px;
+      min-width: 50px;
+      font-size: 28px;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    .sidenav .navigate {
+      margin-top: 20px;
+      padding-left: 8px;
+      height: 100%;
+    }
+
+    .sidenav li {
+      position: relative;
+      margin: 8px 0;
+      list-style: none;
+    }
+
+
+    .sidenav li .tooltip {
+      position: absolute;
+      top: -20px;
+      left: calc(100% + 15px);
+      z-index: 3;
+      background: #fff;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 400;
+      opacity: 0;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: 0s;
+    }
+
+    .sidenav li:hover .tooltip {
+      opacity: 1;
+      pointer-events: auto;
+      transition: all 0.4s ease;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .sidenav.open li .tooltip {
+      display: none;
+    }
+
+    .sidenav li a {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
+      align-items: center;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      background: #92a8d1;
+    }
+
+    .sidenav li a:hover {
+      background: #FFF;
+    }
+
+    .sidenav li a .links {
+      color: black;
+      font-size: 15px;
+      font-weight: 400;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.4s;
+    }
+
+    .sidenav.open li a .links {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .sidenav li a:hover .links,
+    .sidenav li a:hover i {
+      transition: all 0.5s ease;
+      color: #424F5C;
+    }
+
+    .sidenav li i {
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
+      border-radius: 12px;
+      color: rgba(0, 0, 0, 0.815)
+    }
+
+    .sidenav input {
+      font-size: 15px;
+      color: black;
+      font-weight: 400;
+      outline: none;
+      height: 50px;
+      width: 100%;
+      width: 50px;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.5s ease;
+      background: rgb(255, 255, 255);
+    }
+
+    .sidenav.open input {
+      padding: 0 20px 0 50px;
+      width: 100%;
+    }
+
+    .sidenav .bx-search {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      font-size: 22px;
+      background: #8C9CAA;
+      color: #FFF;
+    }
+
+    .sidenav.open .bx-search:hover {
+      background: #8C9CAA;
+      color: #FFF;
+    }
+
+    .sidenav .bx-search:hover {
+      background: #FFF;
+      color: #8C9CAA;
+    }
+
+    .sidenav li.profile {
+      position: fixed;
+      height: 60px;
+      width: 78px;
+      left: 0;
+      bottom: -8px;
+      padding: 10px 14px;
+      background: #8C9CAA;
+      transition: all 0.5s ease;
+      overflow: hidden;
+    }
+
+    .sidenav.open li.profile {
+      width: 250px;
+    }
+
+    .sidenav li .profile_details {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .sidenav li img {
+      height: 45px;
+      width: 45px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-right: 10px;
+    }
+
+    .sidenav li.profile .name,
+    .sidenav li.profile .subname {
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .sidenav li.profile .subname {
+      font-size: 12px;
+    }
+
+    .sidenav .profile #log_out {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      background: #8C9CAA;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 0px;
+      transition: all 0.5s ease;
+    }
+
+    .sidenav.open .profile #log_out {
+      width: 50px;
+      background: none;
+    }
+
+    .home-section {
+      position: relative;
+      background: white;
+      min-height: 100vh;
+      top: 0;
+      left: 78px;
+      width: calc(100% - 78px);
+      transition: all 0.5s ease;
+      z-index: 2;
+    }
+
+    .details i {
+      color: orangered;
+
+    }
+        body {
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f7cac9;
+        }
+
+        .header {
+            font-family: 'Dongle', sans-serif;
+            margin-left: 0px;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            color: black;
+            font-size: 55pt;
+            text-align: left;
+            background-color: white;
+        }
+
+        ol {
+            font-family: 'Dongle', sans-serif;
+            font-size: 21pt;
+            list-style-type: none;
+            margin-right: 15px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            overflow: auto;
+            background-color: black;
+
+        }
+
+        section {
+            font-family: 'Dongle', sans-serif;
+            border-radius: 25px;
+            margin-left: 0px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-top: 60px;
+            padding-bottom: 10px;
+            padding-left: 35px;
+            padding-right: 10px;
+            color: black;
+            font-size: 21pt;
+            text-align: left;
+            background-color: white;
+        }
+
+        section h2 {
+            display: block;
+            text-align: center;
+            border: 5px solid #e6e2d3;
+            border-radius: 25px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-bottom: 15px;
+            margin-right: 30px;
+            margin-left: 0px;
+            font-family: 'Dongle', sans-serif;
+            font-size: 35pt;
+            background-color: white;
+        }
+
+        header {
+            width: 100%;
+            height: 75px;
+        }
+
+        .header {
+            border-radius: 25px;
+        }
+
+        .jumbotron {
+            width: 100%;
+            height: 75px;
+            background-size: 100%;
+            background-color: #92a8d1;
+            color: #ffffff;
+            background-position: center;
+            position: fixed;
+            font-family: 'Gope', sans-serif;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-top: 4px;
+            z-index: 1;
+        }
+
+        .jumbtron p {
+            margin-top: 0px;
+        }
+
+        h1 {
+            margin-bottom: 0px;
+            font-size: 30px;
+        }
+
+        .container-fluid{
+            padding-left: 80px;
+        }
+
+
+        .col-lg-4 {
+            background-color: rgba(184, 184, 184, 0.26);
+            border-radius: 10px;
+            margin-bottom: 10PX;
+        }
+
+        img {
+            border-radius: 5px;
+            border-color: rgba(0, 0, 0, 0.815)
+        }
+
+        .copyright {
+            width: 100%;
+            background-color: #e7b023;
+            color: #000000;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .sidenav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 78px;
+            background: #92a8d1;
+            padding: 6px 14px;
+            z-index: 99;
+            transition: all 0.5s ease;
+        }
+
+        .sidenav.open {
+            width: 250px;
+        }
+
+        .sidenav .details {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .sidenav .details .icon {
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .sidenav .details .namelogo {
+            color: black;
+            font-size: 20px;
+            font-weight: 600;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .sidenav.open .details .icon,
+        .sidenav.open .details .namelogo {
+            opacity: 1;
+        }
+
+        .sidenav .details #btn {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            font-size: 22px;
+            transition: all 0.4s ease;
+            font-size: 23px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .sidenav.open .details #btn {
+            text-align: right;
+        }
+
+        .sidenav i {
+            color: #fff;
+            height: 60px;
+            min-width: 50px;
+            font-size: 28px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .sidenav .navigate {
+            margin-top: 20px;
+            padding-left: 8px;
+            height: 100%;
+        }
+
+        .sidenav li {
+            position: relative;
+            margin: 8px 0;
+            list-style: none;
+        }
+
+        .sidenav li .tooltip {
+            position: absolute;
+            top: -20px;
+            left: calc(100% + 15px);
+            z-index: 3;
+            border-radius: 35px;
+            background: #fff;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 400;
+            opacity: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            transition: 0s;
+        }
+
+        .sidenav li:hover .tooltip {
+            opacity: 1;
+            pointer-events: auto;
+            transition: all 0.4s ease;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .sidenav.open li .tooltip {
+            display: none;
+        }
+
+        .sidenav li a {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            border-radius: 12px;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            background: #92a8d1;
+        }
+
+        .sidenav li a:hover {
+            background: #FFF;
+        }
+
+        .sidenav li a .links {
+            color: black;
+            font-size: 15px;
+            font-weight: 400;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.4s;
+        }
+
+        .sidenav.open li a .links {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .sidenav li a:hover .links,
+        .sidenav li a:hover i {
+            transition: all 0.5s ease;
+            color: #424F5C;
+        }
+
+        .sidenav li i {
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            border-radius: 12px;
+            color: rgba(0, 0, 0, 0.815)
+        }
+
+        .sidenav input {
+            font-size: 15px;
+            color: black;
+            font-weight: 400;
+            outline: none;
+            height: 50px;
+            width: 100%;
+            width: 50px;
+            border: none;
+            border-radius: 12px;
+            transition: all 0.5s ease;
+            background: #ffffff;
+        }
+
+        .sidenav.open input {
+            padding: 0 20px 0 50px;
+            width: 100%;
+        }
+
+        .sidenav .bx-search {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            font-size: 22px;
+            background: #8C9CAA;
+            color: #FFF;
+        }
+
+        .sidenav.open .bx-search:hover {
+            background: #8C9CAA;
+            color: #FFF;
+        }
+
+        .sidenav .bx-search:hover {
+            background: #FFF;
+            color: #8C9CAA;
+        }
+
+        .sidenav li.profile {
+            position: fixed;
+            height: 60px;
+            width: 78px;
+            left: 0;
+            bottom: -8px;
+            padding: 10px 14px;
+            background: #8C9CAA;
+            transition: all 0.5s ease;
+            overflow: hidden;
+        }
+
+        .sidenav.open li.profile {
+            width: 250px;
+        }
+
+        .sidenav li .profile_details {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .sidenav li img {
+            height: 45px;
+            width: 45px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-right: 10px;
+        }
+
+        .sidenav li.profile .group {
+            font-size: 15px;
+            font-weight: 400;
+            color: #fff;
+            white-space: nowrap;
+        }
+
+        .sidenav .profile #log_out {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: #8C9CAA;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 0px;
+            transition: all 0.5s ease;
+        }
+
+        .sidenav.open .profile #log_out {
+            width: 50px;
+            background: none;
+        }
+
+        .home-section {
+            position: relative;
+            background: white;
+            min-height: 100vh;
+            top: 0;
+            left: 78px;
+            width: calc(100% - 78px);
+            transition: all 0.5s ease;
+            z-index: 2;
+        }
+
+        .details i {
+            color: orangered;
+
+        }
+
+        .pshs img {
+            width: 65px;
+            height: 65px;
+            float: left;
+            margin-left: 100px;
+            margin-top: 0px;
+        }
+
+        #top-footer {
+            padding-top: 20px;
+            padding-left: 80px;
+            padding-bottom: 20px;
+            background-color: #e6e2d3;
+            text-align: center;
+        }
+
+        header nav {
+            background-color: #92a8d1;
+        }
+
+        .header nav {
+            border-radius: 25px;
+        }
+
+
+        @media only screen and (min-width: 856px) {
+
+            .sidenav {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+            }
+
+            .jumbotron {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 855px) {
+
+            .sidenav {
+                display: none;
+            }
+
+            .navbar {
+                display: block;
+            }
+
+            .jumbotron {
+                display: none;
+            }
+
+            #top-footer {
+                padding-left: 0px;
+
+            }
+
+            .pshs {
+                display: none;
+            }
+
+            .container-fluid{
+                padding-left: 15px;
+            }
+
+        }
+
+        @media only screen and (max-width: 380px) {
+            ol li {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            body {
+                width: auto;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .header {
+                font-size: 55px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="sidenav">
+        <div class="details">
+            <i class='bx bxs-hot icon'></i>
+            <div class="namelogo">KHUB-CLC</div>
+            <p class='bx bx-menu' id="btn"></p>
+        </div>
+        <ul class="navigate">
+            <li>
+                <i class='bx bx-search ' style="background-color: #92a8d1; color: black;"></i>
+                <form class="form-inline" action="#">
+                    <input type="text" placeholder="Search">
+                </form>
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="Main-Homepage.html">
+                    <i class='bx bxs-dashboard bx-tada-hover'></i>
+                    <span class="links">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="Khub-login.html">
+                    <i class='bx bx-home bx-tada-hover'></i>
+                    <span class="links">Home page</span>
+                </a>
+                <span class="tooltip">Home page</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-calendar bx-tada-hover'></i>
+                    <span class="links">Calendar of Activities</span>
+                </a>
+                <span class="tooltip">Calendar of Activities</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-copy-alt bx-tada-hover'></i>
+                    <span class="links">Private Files</span>
+                </a>
+                <span class="tooltip">Private Files</span>
+            </li>
+            <li>
+                <a href="Author-Page.html">
+                    <i class='bx bxs-group bx-tada-hover'></i>
+                    <span class="links">Site Authors</span>
+                </a>
+                <span class="tooltip">Site Authors</span>
+            </li>
+            <li class="profile">
+                <div class="profile_details">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="peanuts">
+                    <div class="name_prof">
+                        <div class="group">Group 1</div>
+                        <div class="prof">9-Pinatubo 2025</div>
+                    </div>
+                </div>
+                <a href="Khub-login.html">
+                    <i class='bx bx-log-out' id="log_out"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <header>
+        <div class="jumbotron" style="margin-bottom:0">
+            <span class="pshs"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Philippine_Science_High_School_System_%28PSHS%29_-_Pisay.svg/1024px-Philippine_Science_High_School_System_%28PSHS%29_-_Pisay.svg.png"
+                    alt="header">
+            </span>
+            <h1 style="font-family: 'Mochiy Pop P One', sans-serif;">Philippine Science High School</h1>
+            <p style="font-family: 'Mochiy Pop P One', sans-serif;">Central Luzon Campus</p>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Main-Homepage.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Khub-login.html">Home Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Calendar of Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Author-Page.html">Site Authors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Private Files</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline" action="#">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-secondary" type="submit">Search</button>
+                </form>
+            </div>
+            <a class="navbar-brand" href="#">KHUB PSHS-CLC</a>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div class="header"> Biology 3 - Pinatubo
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="Main-Homepage.html">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="#">My courses</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Bio3-9pi</li>
+                    </ol>
+                </nav>
+            </div>
+            <section>
+                <p><img src="https://khub.clc.pshs.edu.ph/theme/image.php/moove/forum/1642486390/icon" alt="announce"
+                    width="30" height="30"><a href="#"> Announcements</a></p>
+            <div class="form-check" style="float:right; margin-top:10px; margin-right:25px;">
+                <input class="form-check-input" type="checkbox" value="" >
+                <label class="form-check-label"  >
+                </label>
+            </div>
+            <p><img src="https://khub.clc.pshs.edu.ph/theme/image.php/moove/url/1642486390/icon" alt="gmeet" width="30"
+                    height="30"><a href="https://meet.google.com/rtz-qvdt-udp?authuser=0"> Google Meet Link</a></p>
+            <h2>2nd Quarter</h2>
+            <div class="form-check" style="float:right; margin-top:10px; margin-right:25px;">
+                <input class="form-check-input" type="checkbox" value="" >
+                <label class="form-check-label"  >
+                </label>
+            </div>
+            <p><img src="https://khub.clc.pshs.edu.ph/theme/image.php/moove/core/1642486390/f/pdf-24" alt="lesson"
+                    width="30" height="30"><a href=""> Lesson 1.1</a></p>
+            <div class="form-check" style="float:right; margin-top:10px; margin-right:25px;">
+                <input class="form-check-input" type="checkbox" value="" >
+                <label class="form-check-label"  >
+                </label>
+            </div>
+            <p><img src="https://khub.clc.pshs.edu.ph/theme/image.php/moove/core/1642486390/f/pdf-24" alt="lesson"
+                    width="30" height="30"><a href=""> Lesson 1.2</a></p>
+            <div class="form-check" style="float:right; margin-top:10px; margin-right:25px;">
+                <input class="form-check-input" type="checkbox" value="" >
+                <label class="form-check-label"  >
+                </label>
+            </div>
+            <p><img src="https://khub.clc.pshs.edu.ph/theme/image.php/moove/core/1642486390/f/pdf-24" alt="lesson"
+                    width="30" height="30"><a href=""> Lesson 1.3</a></p>
+            <div class="form-check" style="float:right; margin-top:10px; margin-right:25px;">
+                <input class="form-check-input" type="checkbox" value="" >
+                <label class="form-check-label" >
+                </label>
+            </div>
+            <p><img src="https://khub.clc.pshs.edu.ph/theme/image.php/moove/url/1642486390/icon" alt="discussion"
+                    width="30" height="30"><a
+                    href="https://www.youtube.com/watch?v=osmHArcf_aE"> Video Discussion
+                    on
+                    Module 1</a></p>
+            <div class="form-check" style="float:right; margin-top:10px; margin-right:25px;">
+
+                <label class="form-check-label"  >
+                </label>
+            </div>
+            <p><img src="https://khub.clc.pshs.edu.ph/theme/image.php/moove/quiz/1642486390/icon" alt="quiz" width="30"
+                    height="30"><a href=""> Quiz 1</a></p>
+            </section>
+        </div>
+
+        </div>
+    <div id="top-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 contact">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/PSHS_System_Logo.png" class="pshs"
+                        alt="icon" width="100" style="float:left; margin-top:8px;">
+                    <img src="https://iconape.com/wp-content/png_logo_vector/dost-logo.png" class="pshs" alt="icon"
+                        width="100" style="float:right; margin-top:8px;">
+                    <h4>PSHS Knowledge Hub - CLC</h4>
+
+                    <img src="https://www.pngkey.com/png/full/251-2513526_icon-small-globe-icon.png" alt="globe"
+                        width="20">
+                    <a href="https://clc.pshs.edu.ph" target="_blank">https://clc.pshs.edu.ph</a><br>
+
+                    <img src="https://pngimage.net/wp-content/uploads/2018/06/logo-phone-png-transparent-4.png"
+                        alt="phone" width="20">
+                    <a href="https://clc.pshs.edu.ph" target="_blank">Tel. No: (045) 499 0136</a><br>
+
+                    <img src="https://icones.pro/wp-content/uploads/2021/02/icone-de-courrier-electronique-gris.png"
+                        alt="globe" width="20">
+                    <a href="mailto:khub@clc.pshs.edu.ph" target="_blank">khub@clc.pshs.edu.ph</a><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let sidenav = document.querySelector(".sidenav");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.addEventListener("click", () => {
+            sidenav.classList.toggle("open");
+            menuBtnChange();
+        });
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();
+        });
+
+
+        function menuBtnChange() {
+            if (sidenav.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            }
+        }
+    </script>
+</body>
+
+</html>
